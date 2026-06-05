@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martinson & Beason, P.C | Tuscaloosa Personal Injury & Family Law Attorneys</title>
+    <meta name="description" content="Martinson & Beason, P.C - Experienced attorneys serving Huntsville, AL. Personal injury, family law, criminal defense. Free consultation.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #C9A961;
+            --dark-navy: #1C3D5A;
+            --navy: #2C5F8D;
+            --light-bg: #F8F9FA;
+            --white: #FFFFFF;
+            --text: #2D3748;
+            --text-light: #718096;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+        }
+        
+        /* Navigation */
+        nav {
+            background: var(--dark-navy);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--gold);
+            letter-spacing: 0.5px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            letter-spacing: 0.3px;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+        
+        .nav-cta {
+            background: var(--gold);
+            color: var(--dark-navy);
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(201, 169, 97, 0.4);
+            color: var(--dark-navy);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--dark-navy) 0%, var(--navy) 100%);
+            color: var(--white);
+            padding: 8rem 20px 6rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+            opacity: 0.5;
+        }
+        
+        .hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-content {
+            max-width: 700px;
+        }
+        
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: var(--white);
+        }
+        
+        .hero-subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--gold);
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        
+        .hero p {
+            font-size: 1.15rem;
+            margin-bottom: 2.5rem;
+            color: rgba(255,255,255,0.9);
+            line-height: 1.8;
+        }
+        
+        .hero-ctas {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn-primary {
+            background: var(--gold);
+            color: var(--dark-navy);
+            padding: 1.1rem 2.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.05rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: inline-block;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(201, 169, 97, 0.4);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            padding: 1.1rem 2.5rem;
+            border: 2px solid var(--white);
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: background 0.3s, color 0.3s;
+            display: inline-block;
+        }
+        
+        .btn-secondary:hover {
+            background: var(--white);
+            color: var(--dark-navy);
+        }
+        
+        /* Trust Bar */
+        .trust-bar {
+            background: var(--gold);
+            padding: 2rem 20px;
+            text-align: center;
+        }
+        
+        .trust-bar-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        
+        .trust-item {
+            text-align: center;
+        }
+        
+        .trust-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--dark-navy);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .trust-label {
+            color: var(--dark-navy);
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        /* Practice Areas */
+        .practice-areas {
+            padding: 6rem 20px;
+            background: var(--white);
+        }
+        
+        .section-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-tag {
+            color: var(--gold);
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+        
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--dark-navy);
+            margin-bottom: 1rem;
+        }
+        
+        .section-description {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .practice-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .practice-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border: 1px solid #E2E8F0;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+        
+        .practice-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+            border-color: var(--gold);
+        }
+        
+        .practice-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--gold) 0%, #B8935A 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .practice-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--dark-navy);
+            margin-bottom: 1rem;
+        }
+        
+        .practice-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+        
+        /* Why Choose Us */
+        .why-choose {
+            padding: 6rem 20px;
+            background: var(--light-bg);
+        }
+        
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .why-item {
+            text-align: center;
+        }
+        
+        .why-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 1.5rem;
+            color: var(--white);
+        }
+        
+        .why-item h3 {
+            font-size: 1.3rem;
+            color: var(--dark-navy);
+            margin-bottom: 1rem;
+        }
+        
+        .why-item p {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--dark-navy) 0%, var(--navy) 100%);
+            padding: 5rem 20px;
+            text-align: center;
+            color: var(--white);
+        }
+        
+        .cta-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+        }
+        
+        .phone-large {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--gold);
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 2rem;
+            transition: transform 0.2s;
+        }
+        
+        .phone-large:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark-navy);
+            color: var(--white);
+            padding: 4rem 20px 2rem;
+        }
+        
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-col h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: var(--gold);
+        }
+        
+        .footer-col p,
+        .footer-col a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.8rem;
+            line-height: 1.7;
+        }
+        
+        .footer-col a:hover {
+            color: var(--gold);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            text-align: center;
+            color: rgba(255,255,255,0.6);
+        }
+        
+        /* Mobile */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-ctas {
+                flex-direction: column;
+            }
+            
+            .practice-grid,
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .phone-large {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Martinson & Beason, P.C</div>
+            <div class="nav-links">
+                <a href="#practice-areas">Practice Areas</a>
+                <a href="#about">About</a>
+                <a href="#why-choose-us">Why Choose Us</a>
+                <a href="#contact" class="nav-cta">Free Consultation</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-subtitle">Experienced Legal Representation</div>
+                <h1>Fighting for Justice.<br>Protecting Your Rights.</h1>
+                <p>When you need a trusted legal advocate, Martinson & Beason, P.C is here to help. We provide aggressive representation with a personal touch for clients across Huntsville and surrounding areas.</p>
+                <div class="hero-ctas">
+                    <a href="tel:2565569588" class="btn-primary">Call (256) 556-9588</a>
+                    <a href="#contact" class="btn-secondary">Free Consultation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <div class="trust-bar">
+        <div class="trust-bar-container">
+            <div class="trust-item">
+                <span class="trust-number">25+</span>
+                <span class="trust-label">Years Experience</span>
+            </div>
+            <div class="trust-item">
+                <span class="trust-number">1000+</span>
+                <span class="trust-label">Cases Won</span>
+            </div>
+            <div class="trust-item">
+                <span class="trust-number">$50M+</span>
+                <span class="trust-label">Recovered</span>
+            </div>
+            <div class="trust-item">
+                <span class="trust-number">24/7</span>
+                <span class="trust-label">Available</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Practice Areas -->
+    <section id="practice-areas" class="practice-areas">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="section-tag">Our Expertise</div>
+                <h2 class="section-title">Practice Areas</h2>
+                <p class="section-description">We provide comprehensive legal services across multiple practice areas, ensuring you receive expert representation no matter your legal needs.</p>
+            </div>
+            
+            <div class="practice-grid">
+                <div class="practice-card">
+                    <div class="practice-icon">⚖️</div>
+                    <h3>Personal Injury</h3>
+                    <p>Car accidents, slip and fall, wrongful death, and medical malpractice. We fight to get you the compensation you deserve.</p>
+                </div>
+                
+                <div class="practice-card">
+                    <div class="practice-icon">👨‍👩‍👧</div>
+                    <h3>Family Law</h3>
+                    <p>Divorce, child custody, alimony, and adoption. Compassionate guidance through difficult family matters.</p>
+                </div>
+                
+                <div class="practice-card">
+                    <div class="practice-icon">🛡️</div>
+                    <h3>Criminal Defense</h3>
+                    <p>DUI, drug charges, assault, and white collar crimes. Aggressive defense to protect your freedom and rights.</p>
+                </div>
+                
+                <div class="practice-card">
+                    <div class="practice-icon">🏢</div>
+                    <h3>Business Law</h3>
+                    <p>Contract disputes, business formation, and employment law. Strategic counsel for your business success.</p>
+                </div>
+                
+                <div class="practice-card">
+                    <div class="practice-icon">🏠</div>
+                    <h3>Real Estate</h3>
+                    <p>Property disputes, closings, and landlord-tenant issues. Expert guidance through complex transactions.</p>
+                </div>
+                
+                <div class="practice-card">
+                    <div class="practice-icon">📋</div>
+                    <h3>Estate Planning</h3>
+                    <p>Wills, trusts, and probate. Secure your legacy and protect your family's future.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why-choose-us" class="why-choose">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="section-tag">The Martinson Difference</div>
+                <h2 class="section-title">Why Choose Us</h2>
+                <p class="section-description">When your future is on the line, you need attorneys who combine legal excellence with genuine care for your case.</p>
+            </div>
+            
+            <div class="why-grid">
+                <div class="why-item">
+                    <div class="why-icon">🎓</div>
+                    <h3>Proven Experience</h3>
+                    <p>Decades of combined legal experience with a track record of successful outcomes for our clients.</p>
+                </div>
+                
+                <div class="why-item">
+                    <div class="why-icon">💪</div>
+                    <h3>Aggressive Representation</h3>
+                    <p>We fight tirelessly for your rights and won't back down from insurance companies or opposing counsel.</p>
+                </div>
+                
+                <div class="why-item">
+                    <div class="why-icon">🤝</div>
+                    <h3>Personal Attention</h3>
+                    <p>You're not just a case number. We provide personalized service and keep you informed every step of the way.</p>
+                </div>
+                
+                <div class="why-item">
+                    <div class="why-icon">💰</div>
+                    <h3>No Win, No Fee</h3>
+                    <p>Many cases handled on contingency. You don't pay unless we win your case.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="cta-section">
+        <div class="section-container">
+            <h2>Get Your Free Consultation Today</h2>
+            <p>Don't wait. The sooner you call, the sooner we can start fighting for you.</p>
+            <a href="tel:2565569588" class="phone-large">(256) 556-9588</a>
+            <br>
+            <a href="tel:2565569588" class="btn-primary">Call Now - Free Consultation</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>Martinson & Beason, P.C</h4>
+                <p>115 North Side Square, Huntsville, AL 35801</p>
+                <p>Huntsville, AL</p>
+                <p><a href="tel:2565569588">(256) 556-9588</a></p>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Practice Areas</h4>
+                <a href="#practice-areas">Personal Injury</a>
+                <a href="#practice-areas">Family Law</a>
+                <a href="#practice-areas">Criminal Defense</a>
+                <a href="#practice-areas">Business Law</a>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="#about">About Us</a>
+                <a href="#why-choose-us">Why Choose Us</a>
+                <a href="#contact">Contact</a>
+                <a href="#contact">Free Consultation</a>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Office Hours</h4>
+                <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
+                <p>Saturday: 9:00 AM - 2:00 PM</p>
+                <p>Sunday: By Appointment</p>
+                <p style="margin-top: 1rem;"><strong>Emergency? Call 24/7</strong></p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Martinson & Beason, P.C. All Rights Reserved. | Attorney Advertising | Past results do not guarantee future outcomes.</p>
+        </div>
+    </footer>
+</body>
+</html>
